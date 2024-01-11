@@ -51,27 +51,27 @@ $amarillo: #FFE500;
          color: $gris-oscuro;
          letter-spacing: 2px;
       }
-      button{
-         background-color: $fucsia;
-         border: none;
-         padding: 10px;
-         margin: 1%;
-         border-radius: 5px;
-         color: $amarillo;
-         font-size: 1.5vw;
-         font-weight: bold;
-         font-family: $texto;
-         box-shadow: $sombra;
-         cursor: pointer;
+      
+}
 
-            &:hover{
-               padding: 13px;
-               
-            }
+.button-pink{
+      background-color: $fucsia;
+      border: none;
+      padding: 10px;
+      margin: 1%;
+      border-radius: 5px;
+      color: $amarillo;
+      font-size: 1.5vw;
+      font-weight: bold;
+      font-family: $texto;
+      box-shadow: $sombra;
+      cursor: pointer;
 
-      }
-
- }
+         &:hover{
+            padding: 13px;
+            
+         }
+}
 
 .container-navbar {
    position: fixed;
@@ -97,4 +97,32 @@ $amarillo: #FFE500;
       font-weight: bold;
    }
  }
- 
+ .corrida{
+   font-family:$corrida ;
+   margin-bottom: 10px;
+ }
+ .container-techniques{
+   
+   margin: 0 auto;
+   background-color: #EBEBEB;
+   border-radius: 50px;
+   padding: 3%;
+   top: -60px;
+   position: relative;
+  
+      
+
+ }
+
+
+ .techniques {
+   width: 100%;
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+
+   div h2{
+      font-weight: 100;
+   }
+ }
+

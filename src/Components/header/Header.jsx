@@ -35,7 +35,7 @@ const Header = () => {
         <div className="title-header">
          <h2>Arte & Victoria</h2>
          <h1>¡ EL MEJOR <br/>REGALO ! </h1>
-         <button>¡Contactanos ya!</button>
+         <button className="button-pink">¡Contactanos ya!</button>
          
         </div>
         </div>

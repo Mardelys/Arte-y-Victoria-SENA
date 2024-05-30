@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.4.2",
+    "axios": "^1.7.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5"
+    "react-hook-form": "^7.51.5",
+    "react-responsive-carousel": "^3.2.23",
+    "sass": "^1.69.5",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "sweetalert2": "^11.11.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ButtonContact from "../buttonContact/ButtonContact";
 
 const Header = () => {
   return (
@@ -18,13 +19,11 @@ const Header = () => {
             <a>Inicio</a>
             <a>Técnicas</a>
             <a>Productos</a>
-            <a>Contacto</a>
             <a>Galeria</a>
           </nav>
-          <div>
-            <a>Carrito</a>
-          </div>
+          
         </div>
+       
         <div>
         <Image className="img-container"
           src="/images/header.png"
@@ -35,9 +34,8 @@ const Header = () => {
         <div className="title-header">
          <h2>Arte & Victoria</h2>
          <h1>¡ EL MEJOR <br/>REGALO ! </h1>
-         <button className="button-pink">¡Contactanos ya!</button>
-         
         </div>
+        
         </div>
       </div>
     </>

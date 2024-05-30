@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Tecnicas from "./Tecnicas";
+import Gallery from "./Gallery";
 
 const Landing = () => {
   return (
@@ -24,9 +25,6 @@ const Landing = () => {
          </div>
          <div  >
             <div className="tecni"><Tecnicas/></div>
-         
-         
-         <button className="button-pink">Ver Productos</button>
          </div>
       </section>
       <section>
@@ -55,7 +53,8 @@ const Landing = () => {
          </div>
       </section>
       <section>
-         //Galeria
+         <h2>Galería</h2>
+         <Gallery/>
       </section>
       </div>
     </>

@@ -13,6 +13,7 @@ $gruesa: 'Lilita One';
 $gris-oscuro:#242121;
 $sombra: 2px 2px 12px $gris-oscuro;
 $amarillo: #FFE500;
+$gris-claro: #958888;
 
 .header{
    width: 100%;
@@ -50,27 +51,12 @@ $amarillo: #FFE500;
          font-size: 5vw;
          color: $gris-oscuro;
          letter-spacing: 2px;
-      }
-      
+   }
 }
 
-.button-pink{
+.button-header{
       background-color: $fucsia;
-      border: none;
-      padding: 10px;
-      margin: 1%;
-      border-radius: 5px;
-      color: $amarillo;
-      font-size: 1.5vw;
-      font-weight: bold;
-      font-family: $texto;
-      box-shadow: $sombra;
-      cursor: pointer;
-
-         &:hover{
-            padding: 13px;
-            
-         }
+      
 }
 
 .container-navbar {
@@ -120,9 +106,67 @@ $amarillo: #FFE500;
    display: flex;
    gap: 20px;
    justify-content: center;
+   color: $gris-claro;
+   align-items: stretch;
+   padding: 15px;
+   text-align: center;
+   
 
-   div h2{
+   div {
+      padding: 1vh;
+      h2{
       font-weight: 100;
+      color: $fucsia;
+   }
+
+   .parrafo{
+      padding: 20px;
+   }
+}
+ }
+ .container-button{
+   position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+ }
+ 
+// global.scss
+
+.filtered-cards {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+ 
+   .card {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 5px;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+     width: 200px;
+     text-align: center;
+ 
+     img {
+       display: block;
+       margin: 0 auto 10px;
+     }
    }
  }
-
+ // Si necesitas más personalización, puedes agregar estilos adicionales
+.carousel .slide img {
+   width:300px; // Ajusta el tamaño de la imagen según sea necesario
+   max-height: 400px; // Ajusta la altura máxima de las imágenes
+   object-fit:contain; // Ajusta cómo se escalan las imágenes
+ }
+ 
+ .carousel .slide .legend {
+   background:$fucsia !important; // Ajusta el fondo de la leyenda
+   color: $amarillo  !important;
+   padding: 10px ;
+   font-size: 1.5rem !important; // Ajusta el tamaño de la fuente de la leyenda
+ }
+ 
+ 

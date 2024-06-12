@@ -27,7 +27,7 @@ const Tecnicas = () => {
         {Tecnicasdata.item.map((item) => (
           <div key={item.id}>
             <h2 className="corrida">{item.title}</h2>
-            <p>{item.paragraph}</p>
+            <p className="parrafo">{item.paragraph}</p>
             <Image
               className="img-techniches"
               src={item.image}
@@ -35,42 +35,43 @@ const Tecnicas = () => {
               width={200}
               height={250}
             />
-            <button onClick={() => handleFilter(item.title)}>
+            <div >
               {" "}
-              {selectedCategory === item.title
-                ? "Cerrar detalle"
-                : "Ver Detalle "}
-            </button>
+              <button className="btn-techni" onClick={() => handleFilter(item.title)}>
+                {" "}
+                {selectedCategory === item.title
+                  ? "Cerrar"
+                  : "Ver Precios "}
+              </button>
+            </div>
           </div>
         ))}
       </div>
-
+      <div className="cards-container">
       {selectedCategory && (
-      <>
-      <h2>{selectedCategory}</h2>
-        <div className="filtered-cards">
-          
-          {filteredCards.length > 0 ? (
-            filteredCards.map((card) => (
-              <div>
-                {" "}
-                <CardProduct
-                  key={card.id}
-                  imagen={card.imagen}
-                  titulo={card.titulo}
-                  medida={card.medida}
-                  precio={card.precio}
-                />
-              </div>
-            ))
-          ) : (
-            <p>No hay cards disponibles para esta categoría.</p>
-          )}
-        </div>
+        <>
+          <h2>{selectedCategory}</h2>
+          <div className="filtered-cards">
+            {filteredCards.length > 0 ? (
+              filteredCards.map((card) => (
+                <div>
+                  {" "}
+                  <CardProduct
+                    key={card.id}
+                    imagen={card.imagen}
+                    titulo={card.titulo}
+                    medida={card.medida}
+                    precio={card.precio}
+                  />
+                </div>
+              ))
+            ) : (
+              <p>No hay cards disponibles para esta categoría.</p>
+            )}
+          </div>
         </>
-      )}
+      )}</div>
     </div>
-    
   );
 };
 

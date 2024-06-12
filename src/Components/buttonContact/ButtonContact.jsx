@@ -67,36 +67,37 @@ const [isModalOpen, setIsModalOpen] = useState(false);
  };
   return (
     <>
-   <button onClick={openModal}>¡Contactanos ya!</button>
+   <button className='btn-contact' onClick={openModal}>¡Contáctanos ya!</button>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-      <form onSubmit={handleSubmit}>
-      <h3>Para mayor información ingrese sus datos</h3>
-      <div>
-        <label>Nombre:</label>
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-        {errors.firstName && <p>{errors.firstName}</p>}
-      </div>
-      <div>
-        <label>Apellido:</label>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-        {errors.lastName && <p>{errors.lastName}</p>}
-      </div>
-      <div>
-        <label>Correo Electrónico:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        {errors.email && <p>{errors.email}</p>}
-      </div>
-      <div>
-        <label>Teléfono:</label>
-        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
-        {errors.phone && <p>{errors.phone}</p>}
-      </div>
-      <div>
-        <label>Comentarios:</label>
-        <textarea name="comments" value={formData.comments} onChange={handleChange}></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+      <form className="contact-form" onSubmit={handleSubmit}>
+  <h3>Para mayor información ingrese sus datos</h3>
+  <div className="form-group">
+    <label>Nombre:</label>
+    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+    {errors.firstName && <p className="error">{errors.firstName}</p>}
+  </div>
+  <div className="form-group">
+    <label>Apellido:</label>
+    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+    {errors.lastName && <p className="error">{errors.lastName}</p>}
+  </div>
+  <div className="form-group">
+    <label>Correo Electrónico:</label>
+    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+    {errors.email && <p className="error">{errors.email}</p>}
+  </div>
+  <div className="form-group">
+    <label>Teléfono:</label>
+    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+    {errors.phone && <p className="error">{errors.phone}</p>}
+  </div>
+  <div className="form-group">
+    <label>Comentarios:</label>
+    <textarea name="comments" value={formData.comments} onChange={handleChange}></textarea>
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+
       </Modal>
       <style jsx>{`
         button {

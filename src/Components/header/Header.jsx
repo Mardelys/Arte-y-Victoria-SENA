@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ButtonContact from "../buttonContact/ButtonContact";
+
 
 const Header = () => {
   return (
@@ -16,10 +16,10 @@ const Header = () => {
             />
           </div>
           <nav className="navbar">
-            <a>Inicio</a>
-            <a>Técnicas</a>
-            <a>Productos</a>
-            <a>Galeria</a>
+            <a href="#landing">Inicio</a>
+            <a href="#tecnica">Técnicas</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#galeria">Galeria</a>
           </nav>
           
         </div>

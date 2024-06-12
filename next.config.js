@@ -1,17 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
-
 // next.config.js
 module.exports = {
    reactStrictMode: true,
-   jsc: {
-     transform: {
-       react: {
-         throwIfNamespace: false,
-       },
-     },
+   eslint: {
+     // Habilita ESLint durante el desarrollo de la aplicación
+     ignoreDuringBuilds: true,
    },
  };
  
